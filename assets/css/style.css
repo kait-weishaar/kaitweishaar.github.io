@@ -1,7 +1,7 @@
 :root{
-    --primary-color: gray;
+    --primary-color: cyan;
     --secondary-color: black;
-    --tertiary-color: red;
+    --tertiary-color: rgb(106, 107, 109);
   }
   * {
     box-sizing: border-box;
@@ -12,18 +12,25 @@
   body {
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
+    cursor: url("../images/cursor.svg"), default;
   }
-
+  #myVideo {
+    position: static;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+  }  
   header {
     padding: 20px 35px;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background-image: url("../images/hero.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
@@ -39,7 +46,7 @@
   }
   header a {
     text-decoration: none;
-    color: rgba(253, 2, 2,0.3);
+    color: cyan;
   }
 
   header nav ul {
@@ -76,12 +83,13 @@
       display:flex;
       flex-direction: column;
       justify-content: space-around;
+      z-index: 5000;
 }
    .social a {
        display: block;
-       padding: 20px;
+       padding: 20%;
        flex: 1 70%;
-       opacity: 0.2;
+       opacity: 0.4;
    }
    .social a:hover {
        opacity:1;
@@ -93,34 +101,33 @@
 
 
   .hero {
-    background-image: url('../images/hero.jpg');
-    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-end;
     background-attachment: fixed;
     background-position: 80%;
-    opacity: 0.3;
-    back
   }
 
   .hero-cta {
     width: 35%;
     text-align: right;
     margin: 3.5%;
-    color: red;
+    color: white;
     font-size: 24px;
     line-height: 1.7;
     opacity: 1;
     display: inline-block;
-    float: right;
+    z-index:7000;
+    position: absolute;
+    margin-top: 25vw;
+
   }
   .hero-cta h2 {
     font-size: 55px;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: red;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    color: white;
     line-height: 1.2;
   }
 
@@ -132,8 +139,27 @@
     justify-content: space-around;
 
 }
+#work h2 {
+    text-align: center;
+    color: var(--tertiary-color);
+    font-size: 5vw;
+    padding: 10vw;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
 #run-buddy {
-    background-image: url("../images/run-buddy.jpg");
+    background-image: url("../images/run-buddy.png");
+    height: 30vw;
+    width: 70vw;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: flex-end;
+    margin: 5vw;
+    opacity:0.6;
+}
+#run-buddy::before {
+
 }
   
 #horiseon {
@@ -141,6 +167,16 @@
     height: 20vw;
     width: 40vw;
     background-size: cover;
-
-
 }
+.gallery {
+    background-color: rgba(255, 255, 255, 0.5);
+    display:flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: flex-end;
+    opacity: 1;
+}
+#horiseon h3, p {
+    align-self: flex-end;
+}
+
