@@ -114,8 +114,8 @@
     text-align: right;
     margin: 3.5%;
     color: white;
-    font-size: 24px;
-    line-height: 1.7;
+    font-size: 1.7vw;
+    line-height: 1.4;
     opacity: 1;
     display: inline-block;
     z-index:7000;
@@ -124,7 +124,7 @@
 
   }
   .hero-cta h2 {
-    font-size: 55px;
+    font-size: 3vw;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(255, 255, 255, 1);
     color: white;
@@ -143,7 +143,7 @@
     text-align: center;
     color: var(--tertiary-color);
     font-size: 5vw;
-    padding: 10vw;
+    padding: 4vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 #run-buddy {
@@ -155,11 +155,13 @@
     flex-direction: column;
     align-items: space-between;
     justify-content: flex-end;
-    margin: 5vw;
-    opacity:0.6;
+    margin-bottom: 5vw;
 }
 #run-buddy::before {
-
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    margin: 0 0;
 }
   
 #horiseon {
